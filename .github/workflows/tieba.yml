@@ -3,8 +3,7 @@ name: Daily Tieba Sign-In
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'  # UTC 22:30 = 北京时间次日 06:30
-
+      - cron: '30 2,22 * * *'  # 北京时间 6:30 (UTC+8)
 jobs:
   signin:
     runs-on: ubuntu-latest
